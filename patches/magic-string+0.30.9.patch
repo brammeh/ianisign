@@ -1,0 +1,15 @@
+diff --git a/node_modules/magic-string/dist/magic-string.es.mjs b/node_modules/magic-string/dist/magic-string.es.mjs
+index b56fb93..64c7251 100644
+--- a/node_modules/magic-string/dist/magic-string.es.mjs
++++ b/node_modules/magic-string/dist/magic-string.es.mjs
+@@ -760,9 +760,7 @@ class MagicString {
+ 
+ 		if (end > this.original.length) throw new Error('end is out of bounds');
+ 		if (start === end)
+-			throw new Error(
+-				'Cannot overwrite a zero-length range – use appendLeft or prependRight instead',
+-			);
++			return
+ 
+ 		this._split(start);
+ 		this._split(end);
